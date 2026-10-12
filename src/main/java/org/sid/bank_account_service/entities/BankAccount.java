@@ -10,6 +10,7 @@ import org.sid.bank_account_service.enums.AccountType;
 
 import java.awt.dnd.DropTarget;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Slf4j @AllArgsConstructor @NoArgsConstructor @Data @Builder
@@ -21,5 +22,7 @@ public class BankAccount {
     private String currency;
     @Enumerated(EnumType.STRING)
     private AccountType type;
+    @ManyToOne
+    private Customer customer;
 
 }
